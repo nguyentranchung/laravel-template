@@ -1,24 +1,44 @@
-# Admin package
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/laravelvn/admin.svg?style=flat-square)](https://packagist.org/packages/laravelvn/admin)
-[![Tests](https://github.com/laravelvn/admin/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/laravelvn/admin/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravelvn/admin.svg?style=flat-square)](https://packagist.org/packages/laravelvn/admin)
-
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+# Admin Package
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require laravelvn/admin
+composer require admin/admin
+```
+
+You can publish and run the migrations with:
+
+```bash
+php artisan vendor:publish --tag="admin-migrations"
+php artisan migrate
+```
+
+You can publish the config file with:
+
+```bash
+php artisan vendor:publish --tag="admin-config"
+```
+
+This is the contents of the published config file:
+
+```php
+return [
+];
+```
+
+Optionally, you can publish the views using
+
+```bash
+php artisan vendor:publish --tag="admin-views"
 ```
 
 ## Usage
 
 ```php
-$skeleton = new LaravelVN\Admin();
-echo $skeleton->echoPhrase('Hello, LaravelVN!');
+$admin = new Admin\Admin();
+echo $admin->echoPhrase('Hello, Admin!');
 ```
 
 ## Testing
@@ -41,8 +61,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
--   [Nguyen Tran Chung](https://github.com/laravelvn)
--   [All Contributors](../../contributors)
+- [Nguyen Tran Chung](https://github.com/nguyentranchung)
+- [All Contributors](../../contributors)
 
 ## License
 

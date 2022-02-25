@@ -1,11 +1,12 @@
 {
-    "name": "laravelvn/admin",
-    "description": "Admin package",
+    "name": "admin/admin",
+    "description": "Admin Package",
     "keywords": [
-        "laravelvn",
+        "admin",
+        "laravel",
         "admin"
     ],
-    "homepage": "https://github.com/laravelvn/admin",
+    "homepage": "https://github.com/admin/admin",
     "license": "MIT",
     "authors": [
         {
@@ -15,30 +16,49 @@
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "illuminate/contracts": "^9.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "pestphp/pest": "^1.20",
-        "spatie/ray": "^1.28"
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "LaravelVN\\Admin\\": "src"
+            "Admin\\Admin\\": "src",
+            "Admin\\Admin\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelVN\\Admin\\Tests\\": "tests"
+            "Admin\\Admin\\Tests\\": "tests"
         }
     },
     "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Admin\\Admin\\AdminServiceProvider"
+            ],
+            "aliases": {
+                "Admin": "Admin\\Admin\\Facades\\Admin"
+            }
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
