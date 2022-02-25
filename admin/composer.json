@@ -1,0 +1,45 @@
+{
+    "name": "laravelvn/admin",
+    "description": "Admin package",
+    "keywords": [
+        "laravelvn",
+        "admin"
+    ],
+    "homepage": "https://github.com/laravelvn/admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nguyen Tran Chung",
+            "email": "nguyentranchung52th@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "pestphp/pest": "^1.20",
+        "spatie/ray": "^1.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelVN\\Admin\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelVN\\Admin\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
