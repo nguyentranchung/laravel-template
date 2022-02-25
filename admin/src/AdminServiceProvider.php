@@ -1,10 +1,10 @@
 <?php
 
-namespace Admin\Admin;
+namespace Admin;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Admin\Admin\Commands\AdminCommand;
+use Admin\Commands\AdminCommand;
 
 class AdminServiceProvider extends PackageServiceProvider
 {

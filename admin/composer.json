@@ -1,12 +1,12 @@
 {
-    "name": "admin/admin",
+    "name": "nguyentranchung/admin",
     "description": "Admin Package",
     "keywords": [
         "admin",
         "laravel",
         "admin"
     ],
-    "homepage": "https://github.com/admin/admin",
+    "homepage": "https://github.com/nguyentranchung/admin",
     "license": "MIT",
     "authors": [
         {
@@ -33,13 +33,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Admin\\Admin\\": "src",
-            "Admin\\Admin\\Database\\Factories\\": "database/factories"
+            "Admin\\": "src",
+            "Admin\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Admin\\Admin\\Tests\\": "tests"
+            "Admin\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,15 +48,18 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Admin\\Admin\\AdminServiceProvider"
+                "Admin\\AdminServiceProvider"
             ],
             "aliases": {
-                "Admin": "Admin\\Admin\\Facades\\Admin"
+                "Admin": "Admin\\Facades\\Admin"
             }
         }
     },

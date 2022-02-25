@@ -1,10 +1,10 @@
 <?php
 
-namespace Admin\Admin\Tests;
+namespace Admin\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Admin\Admin\AdminServiceProvider;
+use Admin\AdminServiceProvider;
 
 class TestCase extends Orchestra
 {

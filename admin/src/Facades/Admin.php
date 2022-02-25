@@ -1,11 +1,11 @@
 <?php
 
-namespace Admin\Admin\Facades;
+namespace Admin\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Admin\Admin\Admin
+ * @see \Admin\Admin
  */
 class Admin extends Facade
 {

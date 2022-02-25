@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Admin;
+namespace Admin;
 
 class Admin
 {
