@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/admin/vendor": true
+    },
+    "i18n-ally.localesPaths": ["lang"]
+}
