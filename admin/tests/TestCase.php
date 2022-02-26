@@ -2,9 +2,9 @@
 
 namespace Admin\Tests;
 
+use Admin\AdminServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Admin\AdminServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,15 +13,8 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Admin\\Admin\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Admin\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
-    }
-
-    protected function getPackageProviders($app)
-    {
-        return [
-            AdminServiceProvider::class,
-        ];
     }
 
     public function getEnvironmentSetUp($app)
@@ -32,5 +25,12 @@ class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_admin_table.php.stub';
         $migration->up();
         */
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            AdminServiceProvider::class,
+        ];
     }
 }

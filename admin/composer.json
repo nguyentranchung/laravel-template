@@ -1,12 +1,12 @@
 {
-    "name": "nguyentranchung/admin",
+    "name": "packages/admin",
     "description": "Admin Package",
     "keywords": [
         "admin",
         "laravel",
         "admin"
     ],
-    "homepage": "https://github.com/nguyentranchung/admin",
+    "homepage": "https://github.com/nguyentranchung",
     "license": "MIT",
     "authors": [
         {
